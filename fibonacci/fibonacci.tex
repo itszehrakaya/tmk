@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor,lipsum}
+
+\usepackage{librebaskerville}
+
+% Defining custom colors
+\definecolor{bgRGB}{RGB}{255,255,212} 
+\definecolor{mypink2}{RGB}{95, 51, 41}
+
+
+
+\pagecolor{bgRGB}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{mypink2}}
+
+
+
+\title{Fibonacci Dizileri}
+\author{Zehra Kaya \\ Melih Mert Oskay}
+\begin{document}
+
+
+\maketitle
+% \tableofcontents
+
+
+
+\section*{Problemler}
+
+%\subsection*{Fibonacci Dizisindeki İlginç Özdeşlikler }
+
+%commment empty line 
+% Remove the double backslashes
+
+Fibonacci dizisi, ilk ve ikinci terimin her ikisinin de 1’e eşit olduğu ve her bir sonraki terimin kendisinden önceki iki terimin toplamı olduğu bir tam sayı dizisidir.
+\begin{align*}
+F_0 &= 1\\
+F_1 &= 1\\
+F_n &= F_{n-1} + F_{n-2} \quad , \quad n \geq 2
+\end{align*}
+
+Fibonacci dizisinin ilginç bir özelliği ise, ilk n terimin toplamının, n+2. terimin 1 eksiğine eşit olmasıdır:\\
+\begin{center}
+    $F_0 + F_1 + \dots F_n = F_{n+2} -1 $\\
+\end{center}
+
+
+    
+
+Bu özdeşliğin doğru olduğunu gösterin. ( Peki bu özdeşlik ilk iki terimi 1 olmayan fibonacci dizileri için de geçerli midir? )
+
+
+\end{document}
